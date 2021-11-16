@@ -10,6 +10,7 @@ const Select = ({
   selected,
   error,
 }) => {
+  const languages = ['Русский', 'Английский', 'Китайский', 'Испанский'];
   return (
     <div className="select">
       <p>{selectName}</p>
@@ -23,18 +24,13 @@ const Select = ({
           <option value="NOT SELECTED" selected>
             {placeholder}
           </option>
-          {options ? (
-            options.map((option) => (
-              <option key={option} selected={option === selected}>
-                {option}
-              </option>
-            ))
-          ) : (
-            <>
-              <option>1</option>
-              <option>2</option>
-            </>
-          )}
+         
+          {languages.map((language, i) => (
+            <option key={i} selected={language === selected}>
+              {language}
+            </option>
+          ))}
+          
         </select>
         {error && <div className="select_error">{error}</div>}
       </div>

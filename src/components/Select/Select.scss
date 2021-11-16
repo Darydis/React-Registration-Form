@@ -1,4 +1,7 @@
 @use "sass:math";
+
+@import './../../styles/variables.scss';
+
 $xs: 167px;
 $s: 207px;
 $m: 344px;
@@ -7,20 +10,33 @@ $xl: 698px;
 
 .select {
   select {
-    //width: 207px;
+    width: 400px;
     height: 44px;
     padding-left: 10px;
     color: grey;
     -webkit-appearance: none;
     -moz-appearance: none;
     outline: none;
-    background-color: rgb(242, 242, 242, 0.4);
+    background-color: white;
     border: 0.5px solid #bdbdbd;
     border-radius: 8px;
+    option {
+      height: 44px;
+     &:hover {
+      background-color: #EBF4F8;
+     }
+    }
     &.error {
       border: 0.5px solid red;
     }
   }
+  option {
+    height: 44px;
+   &:hover {
+    background-color: #EBF4F8;
+   }
+  }
+ 
 
   p {
     font-size: 14px;
@@ -44,29 +60,10 @@ $xl: 698px;
 
   div {
     position: relative;
-    //width: 207px;
   }
 
-  // margin-right: 20px;
 }
 
-.select_padding3px {
-  .select {
-    padding: 3px 0;
-  }
-}
-
-.select_padding6px {
-  .select {
-    padding: 6px 0;
-  }
-}
-
-.select_padding12px {
-  .select {
-    padding: 12px 0;
-  }
-}
 
 .select_wrapper {
   position: relative;
@@ -78,13 +75,13 @@ $xl: 698px;
     top: 48px;
   }
   .select_icon {
-    //mask-image: url(./../../images/icon__expand.svg);
+    mask-image: url(./../../images/icon__expand.svg);
     mask-position: center;
     mask-repeat: no-repeat;
-    background-color: #bdbdbd;
+    background-color: $blue;
     position: absolute;
-    width: 15px;
-    height: 15px;
+    width: 16px;
+    height: 16px;
     right: 15px;
     top: 15px;
     // &.error {

@@ -1,0 +1,79 @@
+$gap: 24px;
+@use "sass:math";
+
+.wrp {
+  display: flex;
+  justify-content: center;
+}
+
+.form {
+  .input,
+  .select {
+    padding-bottom: math.div($gap, 3);
+  }
+}
+
+.form .button {
+  margin-top: $gap;
+  width: 344px;
+}
+
+.form {
+  width: 460px;
+  box-sizing: border-box;
+  padding-bottom: $gap * 10;
+  box-shadow: 0 12px 48px rgba(#2c2738, $alpha: 0.02);
+  box-shadow: 0 32px 64px rgba(#2c2738, $alpha: 0.04);
+  padding-top: $gap * 2;
+  border-radius: 15px;
+  background-color: #fff;
+  padding: 30px;
+  position: relative;
+
+  .fill_fields {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+  }
+
+  .input_wrapper {
+    position: relative;
+    .icon_delete {
+      position: absolute;
+      right: -25px;
+      top: 38px;
+      width: 17px;
+      height: 17px;
+      //mask-image: url("./../../images/icon__delete.svg");
+      mask-repeat: no-repeat;
+      mask-position: center center;
+      mask-size: contain;
+      background-color: #e0e0e0;
+      cursor: pointer;
+      &:hover {
+        background-color: #8b83ba;
+      }
+    }
+  }}
+
+  .header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 80px;
+    margin-bottom: 60px;
+    h3 {
+      font-size: 34px;
+      margin: 0;
+    }
+    p {
+      margin: 0;
+      font-size: 16px;
+    }
+    a {
+      text-decoration: none;
+      color: #0880ae;
+      font-size: 16px;
+    }
+  }

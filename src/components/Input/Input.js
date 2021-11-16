@@ -12,10 +12,11 @@ const Input = ({
   error,
 }) => {
   return (
-    <div className='input'>
+    <div className='wrp'>
+      <div className='input'>
       <p>{inputName}</p>
       <div>
-        {!disabled && <span className={error && "error"} onClick={onClear} />}
+        {/* {!disabled && <span className={error && "error"} onClick={onClear} />} */}
         <input
           id={id}
           className={` ${error && "error"}`}
@@ -27,6 +28,7 @@ const Input = ({
         />
         {error && <div className="input_error">{error}</div>}
       </div>
+    </div>
     </div>
   );
 };

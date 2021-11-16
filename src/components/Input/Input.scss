@@ -6,15 +6,22 @@ $m: 344px;
 $l: 521px;
 $xl: 698px;
 $mob: 414px;
+$gap: 24px;
 
+
+.wrp {
+ text-align: left;
+}
 .input {
   input {
-    // width: 207px;
-    height: 44px;
-    border-radius: 8px;
-    background-color: rgb(242, 242, 242, 0.4);
+    width: 400px;
+    text-align: left;
+    height: 52px;
+    border-radius: 6px;
+    background-color: white;
     border: 0.5px solid #bdbdbd;
     padding: 0;
+    margin-bottom: $gap;
     box-sizing: border-box;
     padding-left: 10px;
     font-size: 16px;
@@ -31,7 +38,8 @@ $mob: 414px;
       border: 0.5px solid #bdbdbd;
     }
     ::placeholder {
-      color: grey;
+      color: red;
+      font-size: 16px;
     }
   }
 
@@ -39,7 +47,7 @@ $mob: 414px;
     font-size: 14px;
     letter-spacing: 0.25px;
     line-height: 18px;
-    color: grey;
+    color: #756F86;
     margin: 0;
     margin-bottom: math.div(24px, 4);
     //font-family: $font;
@@ -64,7 +72,6 @@ $mob: 414px;
 
   div {
     position: relative;
-    // width: 207px;
   }
 
   .input_error {
@@ -73,59 +80,5 @@ $mob: 414px;
     position: absolute;
     left: 0;
     top: 48px;
-  }
-
-  //margin-right: $gap;
-}
-
-.xs {
-  width: $xs;
-}
-.s {
-  width: $s;
-  @media screen and (max-width: $mob) {
-    width: $m;
-  }
-}
-.m {
-  width: $m;
-}
-.l {
-  width: $l;
-}
-.xl {
-  width: $xl;
-}
-
-.input_padding3px {
-  .input {
-    padding: 3px 0;
-  }
-}
-
-.input_padding6px {
-  .input {
-    padding: 6px 0;
-  }
-}
-
-.input_padding12px {
-  .input {
-    padding: 12px 0;
-  }
-}
-
-.big {
-  width: 100%;
-  div {
-    height: 100%;
-  }
-  input {
-    height: 44px;
-    &::placeholder {
-      display: flex;
-      align-items: flex-start;
-      white-space: normal;
-    }
   }
 }
