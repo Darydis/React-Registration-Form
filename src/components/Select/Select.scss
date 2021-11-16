@@ -1,0 +1,94 @@
+@use "sass:math";
+$xs: 167px;
+$s: 207px;
+$m: 344px;
+$l: 521px;
+$xl: 698px;
+
+.select {
+  select {
+    //width: 207px;
+    height: 44px;
+    padding-left: 10px;
+    color: grey;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    outline: none;
+    background-color: rgb(242, 242, 242, 0.4);
+    border: 0.5px solid #bdbdbd;
+    border-radius: 8px;
+    &.error {
+      border: 0.5px solid red;
+    }
+  }
+
+  p {
+    font-size: 14px;
+    letter-spacing: 0.25px;
+    line-height: 18px;
+    color: grey;
+    margin: 0;
+    margin-bottom: math.div(24px, 4);
+  }
+
+  span {
+    //background-image: url("../../images/x.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 44px;
+    height: 47px;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  div {
+    position: relative;
+    //width: 207px;
+  }
+
+  // margin-right: 20px;
+}
+
+.select_padding3px {
+  .select {
+    padding: 3px 0;
+  }
+}
+
+.select_padding6px {
+  .select {
+    padding: 6px 0;
+  }
+}
+
+.select_padding12px {
+  .select {
+    padding: 12px 0;
+  }
+}
+
+.select_wrapper {
+  position: relative;
+  .select_error {
+    color: red;
+    font-size: 12px;
+    position: absolute;
+    left: 0;
+    top: 48px;
+  }
+  .select_icon {
+    //mask-image: url(./../../images/icon__expand.svg);
+    mask-position: center;
+    mask-repeat: no-repeat;
+    background-color: #bdbdbd;
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    right: 15px;
+    top: 15px;
+    // &.error {
+    //   background-color: $error;
+    // }
+  }
+}
