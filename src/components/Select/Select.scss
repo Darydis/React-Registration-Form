@@ -9,16 +9,20 @@ $l: 521px;
 $xl: 698px;
 
 .select {
+  width: 100%;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 8px rgba($color: #2c2738, $alpha: 0.04);
   select {
-    width: 400px;
-    height: 44px;
+    width: 100%;
+    //position: relative;
+    height: 52px;
     padding-left: 10px;
     color: grey;
     -webkit-appearance: none;
     -moz-appearance: none;
     outline: none;
     background-color: white;
-    border: 0.5px solid #bdbdbd;
+    border: 0.5px solid #DBE2EA;
     border-radius: 8px;
     option {
       height: 44px;

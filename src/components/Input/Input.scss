@@ -14,12 +14,13 @@ $gap: 24px;
 }
 .input {
   input {
+    box-shadow: 0 4px 8px rgba($color: #2c2738, $alpha: 0.04);
     width: 400px;
     text-align: left;
     height: 52px;
     border-radius: 6px;
     background-color: white;
-    border: 0.5px solid #bdbdbd;
+    border: 0.5px solid #DBE2EA;
     padding: 0;
     margin-bottom: $gap;
     box-sizing: border-box;
@@ -28,9 +29,6 @@ $gap: 24px;
     color: black;
     outline: none;
     padding-right: 30px;
-    &.error {
-      border: 0.5px solid red;
-    }
     :focus {
       border: 0.5px solid #bdbdbd;
     }
@@ -53,32 +51,32 @@ $gap: 24px;
     //font-family: $font;
   }
 
-  span {
-   // mask-image: url("../../images/x.svg");
-    mask-repeat: no-repeat;
-    mask-position: center;
-    mask-size: contain;
-    background-color: #bdbdbd;
-    width: 14px;
-    height: 14px;
-    position: absolute;
-    right: 15px;
-    top: 15px;
-    cursor: pointer;
-    &.error {
-      background-color: red;
-    }
-  }
+  // span {
+  //  // mask-image: url("../../images/x.svg");
+  //   mask-repeat: no-repeat;
+  //   mask-position: center;
+  //   mask-size: contain;
+  //   background-color: #bdbdbd;
+  //   width: 14px;
+  //   height: 14px;
+  //   position: absolute;
+  //   right: 15px;
+  //   top: 15px;
+  //   cursor: pointer;
+  //   &.error {
+  //     background-color: red;
+  //   }
+  // }
 
   div {
     position: relative;
   }
 
   .input_error {
-    color: red;
-    font-size: 12px;
+    color: #FF7171;
+    font-size: 14px;
     position: absolute;
     left: 0;
-    top: 48px;
+    top: 56px;
   }
 }

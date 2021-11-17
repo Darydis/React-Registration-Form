@@ -4,18 +4,7 @@ $gap: 24px;
 .wrp {
   display: flex;
   justify-content: center;
-}
-
-.form {
-  .input,
-  .select {
-    padding-bottom: math.div($gap, 3);
-  }
-}
-
-.form .button {
-  margin-top: $gap;
-  width: 344px;
+  font-family: 'IBM Plex Sans', sans-serif;
 }
 
 .form {
@@ -35,6 +24,8 @@ $gap: 24px;
     flex-direction: column;
     align-content: center;
     align-items: center;
+    width: 400px;
+    //position: relative;
   }
 
   .input_wrapper {
@@ -76,4 +67,8 @@ $gap: 24px;
       color: #0880ae;
       font-size: 16px;
     }
+  }
+
+  .checkbox-field {
+    margin-bottom: 38px;
   }

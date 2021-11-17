@@ -11,6 +11,7 @@ const Input = ({
   disabled,
   error,
 }) => {
+  
   return (
     <div className='wrp'>
       <div className='input'>
