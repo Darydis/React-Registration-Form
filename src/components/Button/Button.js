@@ -1,11 +1,11 @@
 import "./Button.scss";
 
 const Button = ({ handle, name, error }) => {
-  console.log('error?', {error});
+  console.log('error?', error);
   return (
     <div className="button">
       <button
-        className={`${error&&error!==null ? "disabled" : "active"}
+        className={`${error&&error.name === null&&error.number === null&&error.email === null ? "active" : "disabled"}
         `}
         onClick={handle}
       >

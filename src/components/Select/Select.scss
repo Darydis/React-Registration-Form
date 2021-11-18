@@ -24,6 +24,9 @@ $xl: 698px;
     background-color: white;
     border: 0.5px solid #DBE2EA;
     border-radius: 8px;
+    &:focus {
+      border: 2px solid $blue;
+    }
     option {
       height: 44px;
      &:hover {
