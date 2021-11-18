@@ -19,13 +19,25 @@
 	font-weight: 500;
 	.active {
 		background-color: $blue;
-		color: white;
+		color: $white;
 		cursor: pointer;
+		box-shadow: 0 4px 8px rgba($color: $black, $alpha: 0.08);
+		box-shadow: 0 2px 4px rgba($color: $black, $alpha: 0.08);
+		&:hover {
+			box-shadow: 0 12px 24px rgba($color: $black, $alpha: 0.08);
+		}
+		&:active {
+			box-shadow: 0 2px 4px rgba($color: $black, $alpha: 0.01);
+			box-shadow: 0 4px 8px rgba($color: $black, $alpha: 0.08);
+			border: 2px solid rgba($color: $black, $alpha: 0.86);
+		}
 	}
 	.disabled {
 		background-color: DBE2EA;
 		pointer-events: none;
 		color: #b1b5bf;
 		cursor: unset;
+		font-weight: 500;
+		box-shadow: 0 4px 8px rgba($color: $black, $alpha: 0.08);
 	}
 }

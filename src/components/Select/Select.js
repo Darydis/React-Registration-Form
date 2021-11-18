@@ -1,41 +1,33 @@
-import React from "react";
-import "./Select.scss";
+import React, { useState } from 'react';
+import './Select.scss';
 
-const Select = ({
-  selectName,
-  placeholder,
-  options,
-  onChange,
-  disabled,
-  selected,
-  error,
-}) => {
-  const languages = ['Русский', 'Английский', 'Китайский', 'Испанский'];
-  return (
-    <div className="select">
-      <p>{selectName}</p>
-      <div className={`select_wrapper ${error && "error"}`}>
-        <div className={`select_icon ${error && "error"}`} />
-        <select
-          className={`${error && "error"}`}
-          onChange={onChange}
-          disabled={disabled}
-        >
-          <option value="NOT SELECTED" selected>
-            {placeholder}
-          </option>
-         
-          {languages.map((language, i) => (
-            <option key={i} selected={language === selected}>
-              {language}
-            </option>
-          ))}
-          
-        </select>
-        {error && <div className="select_error">{error}</div>}
-      </div>
-    </div>
-  );
+const Select = ({ selectName, placeholder }) => {
+	const [isShown, setIsShown] = useState(false);
+	const languages = ['Русский', 'Английский', 'Китайский', 'Испанский'];
+	const [isLanguage, setIsLanguage] = useState();
+	return (
+		<div
+			className="select"
+			onClick={() => setIsShown(isShown === true ? false : true)}
+		>
+			<p>{selectName}</p>
+			<div className="select_wrapper">
+				<div className="select_icon" />
+				<ul tabIndex="1">
+					<li className="dropdown" value="NOT SELECTED" selected>
+						{isLanguage ? isLanguage : placeholder}
+					</li>
+					<div className={`list  ${isShown == true ? 'shown' : 'hidden'}`}>
+						{languages.map((language, i) => (
+							<li onClick={() => setIsLanguage(language)} key={i}>
+								{language}
+							</li>
+						))}
+					</div>
+				</ul>
+			</div>
+		</div>
+	);
 };
 
 export default Select;

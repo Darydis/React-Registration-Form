@@ -13,13 +13,12 @@ const Checkbox = ({ id, value, onChange }) => {
 					value={value}
 					onChange={onChange}
 				/>
-				<label className={value && 'checked'} htmlFor={id}></label>
+				<label className={value === 1 && 'checked'} htmlFor={id}></label>
 			</div>
-			<div>
-				<span>
-					Принимаю <a href="/">условия</a> использования
-				</span>
-			</div>
+
+			<span>
+				Принимаю <a href="/">условия</a> использования
+			</span>
 		</div>
 	);
 };

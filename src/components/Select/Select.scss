@@ -1,98 +1,86 @@
-@use "sass:math";
-
+@use 'sass:math';
 @import './../../styles/variables.scss';
 
-$xs: 167px;
-$s: 207px;
-$m: 344px;
-$l: 521px;
-$xl: 698px;
-
 .select {
-  width: 100%;
-  margin-bottom: 30px;
-  box-shadow: 0 4px 8px rgba($color: #2c2738, $alpha: 0.04);
-  select {
-    width: 100%;
-    //position: relative;
-    height: 52px;
-    padding-left: 10px;
-    color: grey;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    outline: none;
-    background-color: white;
-    border: 0.5px solid #DBE2EA;
-    border-radius: 8px;
-    &:focus {
-      border: 2px solid $blue;
-    }
-    option {
-      height: 44px;
-     &:hover {
-      background-color: #EBF4F8;
-     }
-    }
-    &.error {
-      border: 0.5px solid red;
-    }
-  }
-  option {
-    height: 44px;
-   &:hover {
-    background-color: #EBF4F8;
-   }
-  }
- 
+	width: 100%;
+	ul {
+		box-shadow: 0 4px 8px rgba($color: #2c2738, $alpha: 0.04);
+		padding-inline-start: 0;
+		height: 52px;
+		border: 1px solid #dbe2ea;
+		border-radius: 6px;
+		padding-top: 12px;
+		box-sizing: border-box;
+		cursor: pointer;
+		&:focus {
+			outline: 2px solid $blue;
+		}
 
-  p {
-    font-size: 14px;
-    letter-spacing: 0.25px;
-    line-height: 18px;
-    color: grey;
-    margin: 0;
-    margin-bottom: math.div(24px, 4);
-  }
+		li {
+			&.dropdown {
+				color: $lightblue;
+			}
+			text-decoration: none;
+			list-style: none;
+			padding-left: 8px;
+		}
+		.hidden {
+			display: none;
+		}
+		.shown {
+			display: block;
+		}
 
-  span {
-    //background-image: url("../../images/x.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 44px;
-    height: 47px;
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
+		.list {
+			background-color: white;
+			position: absolute;
+			width: 100%;
+			top: 58px;
+			border: 1px solid #dbe2ea;
+			border-radius: 6px;
+			color: $black;
+			li {
+				position: relative;
+				height: 44px;
+				width: 100%;
+				padding-top: 10px;
+				box-sizing: border-box;
+				&:hover {
+					background-color: $white;
+				}
+			}
+		}
+	}
 
-  div {
-    position: relative;
-  }
-
+	p {
+		font-size: 16px;
+		letter-spacing: 0.25px;
+		line-height: 18px;
+		color: $grey;
+		font-weight: 500;
+		margin: 0;
+		margin-bottom: math.div(24px, 4);
+	}
 }
 
-
 .select_wrapper {
-  position: relative;
-  .select_error {
-    color: red;
-    font-size: 12px;
-    position: absolute;
-    left: 0;
-    top: 48px;
-  }
-  .select_icon {
-    mask-image: url(./../../images/icon__expand.svg);
-    mask-position: center;
-    mask-repeat: no-repeat;
-    background-color: $blue;
-    position: absolute;
-    width: 16px;
-    height: 16px;
-    right: 15px;
-    top: 15px;
-    // &.error {
-    //   background-color: $error;
-    // }
-  }
+	position: relative;
+	.select_error {
+		color: red;
+		font-size: 12px;
+		position: absolute;
+		left: 0;
+		top: 48px;
+	}
+	.select_icon {
+		mask-image: url(./../../images/icon__expand.svg);
+		mask-position: center;
+		mask-repeat: no-repeat;
+		background-color: $blue;
+		position: absolute;
+		width: 16px;
+		height: 16px;
+		right: 15px;
+		top: 19px;
+	}
 }

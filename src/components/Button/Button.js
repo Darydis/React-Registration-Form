@@ -1,18 +1,24 @@
-import "./Button.scss";
+import './Button.scss';
 
-const Button = ({ handle, name, error }) => {
-  console.log('error?', error);
-  return (
-    <div className="button">
-      <button
-        className={`${error&&error.name === null&&error.number === null&&error.email === null ? "active" : "disabled"}
+const Button = ({ name, error, checked }) => {
+	return (
+		<div className="button">
+			<button
+				className={`${
+					error &&
+					error.name === null &&
+					error.number === null &&
+					error.email === null &&
+					checked === 1
+						? 'active'
+						: 'disabled'
+				}
         `}
-        onClick={handle}
-      >
-        {name}
-      </button>
-    </div>
-  );
+			>
+				{name}
+			</button>
+		</div>
+	);
 };
 
 export default Button;

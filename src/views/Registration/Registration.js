@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import Button from '../../components/Button.js/Button';
+import Button from '../../components/Button/Button';
 import Checkbox from '../../components/Сheckbox/Checkbox';
 import Input from './../../components/Input/Input';
 import Select from './../../components/Select/Select';
@@ -35,11 +34,11 @@ const Registration = () => {
 	const inputAndCheckName = (id, value) => {
 		if (value && !value.match(/^[\s\-A-Za-zА-Яа-яЁё]+$/)) {
 			setError({ ...error, [id]: checkError });
-			console.log('errorr in name>>>', error);
 		} else {
 			setError({ ...error, [id]: null });
 		}
 	};
+
 	return (
 		<div className="wrp">
 			<div className="form">
@@ -48,7 +47,7 @@ const Registration = () => {
 					<div className="signup">
 						<span>Уже есть аккаунт?</span>
 						<span>
-							<Link> Войти</Link>
+							<a href="/">Войти</a>
 						</span>
 					</div>
 				</div>
@@ -72,7 +71,11 @@ const Registration = () => {
 						onChange={(e) => inputAndCheckNumber('number', e.target.value)}
 					/>
 					<Select selectName="Язык" placeholder="Язык" />
-					<Checkbox onChange={() => console.log('change')} />
+					<Checkbox
+						id="accept_terms"
+						onChange={() => setIsChecked(isChecked === 1 ? 0 : 1)}
+						value={isChecked}
+					/>
 					<Button checked={isChecked} error={error} name="Зарегистрироваться" />
 				</div>
 			</div>

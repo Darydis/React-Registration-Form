@@ -1,74 +1,66 @@
-$gap: 24px;
-@use "sass:math";
+@use 'sass:math';
+@import '../../styles/variables.scss';
 
 .wrp {
-  display: flex;
-  justify-content: center;
-  font-family: 'IBM Plex Sans', sans-serif;
+	display: flex;
+	justify-content: center;
+	font-family: 'IBM Plex Sans', sans-serif;
 }
 
 .form {
-  width: 460px;
-  box-sizing: border-box;
-  padding-bottom: $gap * 10;
-  box-shadow: 0 12px 48px rgba(#2c2738, $alpha: 0.02);
-  box-shadow: 0 32px 64px rgba(#2c2738, $alpha: 0.04);
-  padding-top: $gap * 2;
-  border-radius: 15px;
-  background-color: #fff;
-  padding: 30px;
-  position: relative;
+	width: 460px;
+	box-sizing: border-box;
+	padding-bottom: $gap * 10;
+	box-shadow: 0 12px 48px rgba(#2c2738, $alpha: 0.02);
+	box-shadow: 0 32px 64px rgba(#2c2738, $alpha: 0.04);
+	padding-top: $gap * 2;
+	border-radius: 15px;
+	background-color: #fff;
+	padding: 30px;
+	position: relative;
+	@media screen and (max-width: $formsize) {
+		width: 100%;
+	}
 
-  .fill_fields {
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    align-items: center;
-    width: 400px;
-    //position: relative;
-  }
+	.fill_fields {
+		display: flex;
+		flex-direction: column;
+		align-content: center;
+		align-items: center;
+		width: 400px;
+		@media screen and (max-width: $formsize) {
+			width: 100%;
+		}
+	}
+}
 
-  .input_wrapper {
-    position: relative;
-    .icon_delete {
-      position: absolute;
-      right: -25px;
-      top: 38px;
-      width: 17px;
-      height: 17px;
-      //mask-image: url("./../../images/icon__delete.svg");
-      mask-repeat: no-repeat;
-      mask-position: center center;
-      mask-size: contain;
-      background-color: #e0e0e0;
-      cursor: pointer;
-      &:hover {
-        background-color: #8b83ba;
-      }
-    }
-  }}
+.header {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 74px;
+	margin-bottom: 50px;
+	h3 {
+		font-size: 34px;
+		margin: 0;
+	}
+	p {
+		margin: 0;
+		font-size: 16px;
+	}
+	a {
+		text-decoration: none;
+		color: $blue;
+		font-size: 16px;
+	}
+	.signup {
+		span {
+			font-weight: 400;
+			padding-left: 4px;
+		}
+	}
+}
 
-  .header {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 80px;
-    margin-bottom: 60px;
-    h3 {
-      font-size: 34px;
-      margin: 0;
-    }
-    p {
-      margin: 0;
-      font-size: 16px;
-    }
-    a {
-      text-decoration: none;
-      color: #0880ae;
-      font-size: 16px;
-    }
-  }
-
-  .checkbox-field {
-    margin-bottom: 38px;
-  }
+.checkbox-field {
+	margin-bottom: 38px;
+}
