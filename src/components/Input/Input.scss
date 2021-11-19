@@ -1,62 +1,57 @@
 @use 'sass:math';
 @import './../../styles/variables.scss';
 
-$xs: 167px;
-$s: 207px;
-$m: 344px;
-$l: 521px;
-$xl: 698px;
 .wrp {
 	text-align: left;
 	width: 100%;
-}
-.input {
-	width: 100%;
-	p {
-		color: $grey;
-		font-weight: 500;
-		margin: 8px 0;
+	.input {
 		width: 100%;
-	}
-	input {
-		box-shadow: 0 4px 8px rgba($color: $black, $alpha: 0.04);
-		width: 400px;
-		text-align: left;
-		height: 52px;
-		border-radius: 6px;
-		background-color: white;
-		border: 0.5px solid #dbe2ea;
-		padding: 0;
-		margin-bottom: $gap;
-		box-sizing: border-box;
-		padding-left: 10px;
-		font-size: 16px;
-		color: $black;
-		outline: none;
-		padding-right: 30px;
-		@media screen and (max-width: $formsize) {
+		p {
+			color: $grey;
+			font-weight: 500;
+			margin: 8px 0;
 			width: 100%;
 		}
-		&:focus {
-			border: 2px solid $blue;
-		}
-		&::placeholder {
-			color: $lightblue;
+		input {
+			box-shadow: 0 4px 8px rgba($color: $black, $alpha: 0.04);
+			width: 400px;
+			text-align: left;
+			height: 52px;
+			border-radius: 6px;
+			background-color: white;
+			border: 0.5px solid #dbe2ea;
+			padding: 0;
+			margin-bottom: $gap;
+			box-sizing: border-box;
+			padding-left: 10px;
 			font-size: 16px;
+			color: $black;
+			outline: none;
+			padding-right: 30px;
+			@media screen and (max-width: $formsize) {
+				width: 100%;
+			}
+			&:focus {
+				border: 2px solid $blue;
+			}
+			&::placeholder {
+				color: $lightblue;
+				font-size: 16px;
+				font-weight: 400;
+			}
+		}
+
+		div {
+			position: relative;
+		}
+
+		.input_error {
+			color: $red;
+			font-size: 14px;
+			position: absolute;
+			left: 0;
+			top: 56px;
 			font-weight: 400;
 		}
-	}
-
-	div {
-		position: relative;
-	}
-
-	.input_error {
-		color: $red;
-		font-size: 14px;
-		position: absolute;
-		left: 0;
-		top: 56px;
-		font-weight: 400;
 	}
 }

@@ -3,50 +3,76 @@
 
 .select {
 	width: 100%;
-	ul {
-		box-shadow: 0 4px 8px rgba($color: #2c2738, $alpha: 0.04);
-		padding-inline-start: 0;
-		height: 52px;
-		border: 1px solid #dbe2ea;
-		border-radius: 6px;
-		padding-top: 12px;
-		box-sizing: border-box;
-		cursor: pointer;
-		&:focus {
-			outline: 2px solid $blue;
-		}
-
-		li {
-			&.dropdown {
-				color: $lightblue;
-			}
-			text-decoration: none;
-			list-style: none;
-			padding-left: 8px;
-		}
-		.hidden {
-			display: none;
-		}
-		.shown {
-			display: block;
-		}
-
-		.list {
-			background-color: white;
+	.select_wrapper {
+		position: relative;
+		.select_error {
+			color: red;
+			font-size: 12px;
 			position: absolute;
-			width: 100%;
-			top: 58px;
+			left: 0;
+			top: 48px;
+		}
+		.select_icon {
+			mask-image: url(./../../images/icon__expand.svg);
+			mask-position: center;
+			mask-repeat: no-repeat;
+			background-color: $blue;
+			position: absolute;
+			width: 16px;
+			height: 16px;
+			right: 15px;
+			top: 19px;
+		}
+		ul {
+			box-shadow: 0 4px 8px rgba($color: #2c2738, $alpha: 0.04);
+			padding-inline-start: 0;
+			height: 52px;
 			border: 1px solid #dbe2ea;
 			border-radius: 6px;
-			color: $black;
+			padding-top: 13px;
+			box-sizing: border-box;
+			cursor: pointer;
+
+			&:focus {
+				outline: 2px solid $blue;
+			}
+
 			li {
-				position: relative;
-				height: 44px;
+				&.dropdown {
+					color: $lightblue;
+				}
+				text-decoration: none;
+				list-style: none;
+				padding-left: 8px;
+			}
+
+			.hidden {
+				display: none;
+			}
+
+			.shown {
+				display: block;
+			}
+
+			.list {
+				background-color: white;
+				position: absolute;
 				width: 100%;
-				padding-top: 10px;
-				box-sizing: border-box;
-				&:hover {
-					background-color: $white;
+				top: 58px;
+				border: 1px solid #dbe2ea;
+				border-radius: 6px;
+				color: $black;
+
+				li {
+					position: relative;
+					height: 44px;
+					width: 100%;
+					padding-top: 10px;
+					box-sizing: border-box;
+
+					&:hover {
+						background-color: $white;
+					}
 				}
 			}
 		}
@@ -60,27 +86,5 @@
 		font-weight: 500;
 		margin: 0;
 		margin-bottom: math.div(24px, 4);
-	}
-}
-
-.select_wrapper {
-	position: relative;
-	.select_error {
-		color: red;
-		font-size: 12px;
-		position: absolute;
-		left: 0;
-		top: 48px;
-	}
-	.select_icon {
-		mask-image: url(./../../images/icon__expand.svg);
-		mask-position: center;
-		mask-repeat: no-repeat;
-		background-color: $blue;
-		position: absolute;
-		width: 16px;
-		height: 16px;
-		right: 15px;
-		top: 19px;
 	}
 }

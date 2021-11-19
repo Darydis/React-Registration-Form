@@ -12,7 +12,7 @@ const Registration = () => {
 	const inputAndCheckNumber = (id, value) => {
 		if (
 			value &&
-			!value.match(/^(\+?7|8)?\-?\(?9\d{2}\)?\-?\d{3}\-?\d{2}\-?\d{2}$/)
+			!value.match(/^(\+?7|8)?-?\(?9\d{2}\)?-?\d{3}-?\d{2}-?\d{2}$/)
 		) {
 			setError({ ...error, [id]: checkError });
 		} else {
@@ -55,19 +55,19 @@ const Registration = () => {
 					<Input
 						inputName="Имя"
 						placeholder="Введите Ваше имя"
-						error={error['name']}
+						error={error && error['name']}
 						onChange={(e) => inputAndCheckName('name', e.target.value)}
 					/>
 					<Input
 						inputName="Email"
 						placeholder="Введите Ваш email"
-						error={error['email']}
+						error={error && error['email']}
 						onChange={(e) => inputAndCheckEmail('email', e.target.value)}
 					/>
 					<Input
 						inputName="Номер телефона"
 						placeholder="Введите номер телефона"
-						error={error['number']}
+						error={error && error['number']}
 						onChange={(e) => inputAndCheckNumber('number', e.target.value)}
 					/>
 					<Select selectName="Язык" placeholder="Язык" />

@@ -17,7 +17,7 @@ const Select = ({ selectName, placeholder }) => {
 					<li className="dropdown" value="NOT SELECTED" selected>
 						{isLanguage ? isLanguage : placeholder}
 					</li>
-					<div className={`list  ${isShown == true ? 'shown' : 'hidden'}`}>
+					<div className={`list  ${isShown === true ? 'shown' : 'hidden'}`}>
 						{languages.map((language, i) => (
 							<li onClick={() => setIsLanguage(language)} key={i}>
 								{language}
